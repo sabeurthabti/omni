@@ -1,5 +1,4 @@
-# omni
-
+# omni -  Config Management via API
 
 ## Commands:
 
