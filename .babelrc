@@ -1,1 +1,16 @@
-{ "presets": ["es2015"] }
+{
+  "presets": [
+    "es2015"
+  ],
+  "plugins": [
+    "transform-object-rest-spread"
+  ],
+  "env": {
+    "cover": {
+      "plugins": [
+        "transform-object-rest-spread",
+        "istanbul"
+      ]
+    }
+  }
+}

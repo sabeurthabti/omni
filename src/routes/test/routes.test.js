@@ -13,8 +13,12 @@ describe('Routes', () => {
     routes.init(expressApp);
   });
 
-  it('should /config/{client}/{version} route', () => {
-    expect(expressApp.post).to.have.been.calledWith('/config');
-    expect(expressApp.get).to.have.been.calledWith('/config/:client/:version');
+  it('should have /config/{client}/{version} route handler', () => {
+    expect(expressApp.get).to.have.been.calledWith('/config/:client/:version', sinon.match.func);
   });
+
+  it('should have /config route handler', () => {
+    expect(expressApp.get).to.have.been.calledWith('/config/:client/:version', sinon.match.func);
+  });
+
 });
